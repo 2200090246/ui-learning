@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background-color: lightgray;
+            padding: 10px;
+        }
+        button{
+            cursor: pointer;
+        }
+        ul.nav li {
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        ul.courses li::before {
+            content: "⭐";
+            margin-right: 10px;
+        }
+
+        label.required::after {
+            content: "(Required)";
+            color: red;
+        }
+
+        *::selection {
+            background-color: lightblue;
+            color: white;
+        }
+
+        .Welcome::first-letter {
+            font-size: 40px;
+            color: red;
+            font-weight: bold;
+        }
+
+        .Welcome::first-line {
+            color: blue;
+            font-weight: bold;
+        }
+
+        input::placeholder {
+            color: gray;
+            font-style: italic;
+        }
+
+        textarea::placeholder {
+            color: gray;
+            font-style: italic;
+        }
+
+        ul.courses li::marker {
+            color: red;
+            font-size: 35px;
+        }
+
+        input[type="text"] {
+            background-color: lightyellow;
+        }
+
+        input[type="email"] {
+            border-color: green;
+        }
+
+        input[type="password"] {
+            background-color: lightpink;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead th {
+            background-color: rgb(44, 158, 196);
+        }
+
+        tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        form {
+            border: 2px solid black;
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+            margin: auto;
+        }
+        .Register {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Courses</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div>
+        <h2 class="Welcome">Welcome to MWS learning Academy</h2>
+        <p>MWS Learning Academy is a dynamic and student-focused institution dedicated to nurturing curiosity,
+            creativity, and academic excellence. It offers a supportive environment where learners of all ages can
+            explore subjects ranging from foundational academics to advanced skill development. The academy emphasizes
+            personalized teaching methods, ensuring that each student’s strengths are recognized and cultivated. With
+            experienced educators, interactive learning tools, and a commitment to holistic growth, MWS Learning Academy
+            inspires students to think critically, solve problems effectively, and develop confidence in their
+            abilities. Beyond academics, it encourages teamwork, communication, and lifelong learning, preparing
+            students not just for exams, but for real-world success.</p>
+
+    </div>
+    <div>
+        <h2>Courses Offered</h2>
+        <ul class="courses">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java</li>
+            <li>python</li>
+            <li>SQL</li>
+        </ul>
+    </div>
+    <div>
+        <h2 class="Register">Registration Form</h2>
+        <form>
+            <label class="required">Student Name: </label>
+            <input type="text" name="name" placeholder="Enter your name"><br><br>
+            <label class="required">Email: </label>
+            <input type="email" name="email" placeholder="Enter your email"><br><br>
+            <label>password: </label>
+            <input type="password" name="password" placeholder="Enter your password"><br><br>
+            <label>Phone number: </label>
+            <input type="tel" name="phone" placeholder="Enter your phone number"><br><br>
+            <label>Select your Course: </label>
+            <select name="course">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="sql">SQL</option>
+            </select><br><br>
+            <label>Gender: </label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+            <label>Address: </label>
+            <textarea name="address" placeholder="Enter your address"></textarea><br><br>
+            <button type="submit">Submit</button>
+
+        </form>
+    </div><br><br>
+    <table border="1">
+        <thead>
+            <th>Student_Id</th>
+            <th>Student_Name</th>
+            <th>Course</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>HTML</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>CSS</td>
+                <td>Inactive</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Michael Johnson</td>
+                <td>Java</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Emily Davis</td>
+                <td>Python</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>William Brown</td>
+                <td>SQL</td>
+                <td>Inactive</td>
+            </tr>
+    </table>
+
+</body>
+
+</html>
