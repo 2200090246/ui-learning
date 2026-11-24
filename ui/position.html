@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #263d54;
+            color: white;
+            position: sticky;
+            top: 0px;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .navul li {
+            list-style-type: none;
+            display: inline;
+            margin-right: 20px;
+            padding-right: 3px;
+            cursor: pointer;
+        }
+
+        .travel {
+            list-style-type: none;
+        }
+
+        .title {
+            text-align: center;
+            border: 2px solid #87a3ad;
+            margin: 20px;
+            background-color: #87a3ad;
+            justify-content: center;
+            height: 120px;
+            color: white;
+            padding: 10px;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .divul li {
+            display: inline;
+            gap: 5px;
+            margin-top: 50px;
+        }
+
+        .divul {
+            padding-top: 15px;
+            padding-bottom: 10px;
+        }
+
+        .Explore {
+            background-color: rgb(28, 28, 95);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .popular {
+            background-color: black;
+            border: 1px solid black;
+            height: 365px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .popular div h2 {
+            padding-left: 10px;
+            padding-top: 15px;
+            margin-bottom: 0px;
+        }
+
+        .popular div:nth-child(2) {
+            background-color: red;
+            height: 100px;
+            height: 250px;
+            border-radius: 10px;
+            width: 32%;
+            margin: 9px;
+            background-size: 100% 100%;
+            background-position: center;
+            background-image: url("https://images.openai.com/static-rsc-4/YCX4e0uMeRDHkfcy1or6v69pCRWh0wjD1IgxYO6HWwZxZNIyhAxz1pmYFX-YC6jEGaJeSS6tXlf7LGd6SoxTZqmGgiqC3D6ynJXwMYPcTueXfESEjo-UKB6MSQAjHZtQqOT02AixfFSob2hmwg6pTvHP61q84vBXo7Xod9JdCVK7bXke5WTYjKkXnVMts4oy?purpose=fullsize");
+        }
+
+        .popular div:nth-child(3) {
+            background-color: rgb(144, 76, 76);
+            border: 1px solid black;
+            height: 100px;
+            height: 250px;
+            width: 32%;
+            border-radius: 10px;
+            background-size: 100% 100%;
+
+            margin: 9px;
+            background-position: center;
+            border: 1px solid black;
+            background-image: url("https://images.openai.com/static-rsc-4/h161GwzFiNvNK6xUtrZJ1K59sAH4s0R-ATmYnN49GU97q2QucgWOdorjlaGMQccQHGbTolYmBF_A-yZImKz_5MNvstkZuwnq68W2sil_ycDWr2YfR5puWueM99j4BCxiEDjHoOSZpnQear-Rt9ZSuZNKaL7Lf4JW4VinHYxG4-yziivP2Qw6Vx-B7q959owz?purpose=fullsize");
+        }
+
+        .popular div:nth-child(4) {
+            background-color: rgb(144, 76, 76);
+            height: 100px;
+            height: 250px;
+            background-size: 100% 100%;
+
+            border-radius: 10px;
+            width: 32%;
+            background-position: center;
+            margin: 9px;
+            border: 1px solid black;
+            background-image: url("https://images.openai.com/static-rsc-4/E9ZP7hUEAEo8hp8pZng2dyBujqCkFmKketJpZMaqt_VG4NK9slWRzEbYCPAFw_McZ6OEFk_z2F87fOi2Dq1KPODF_xEHQ0arOrRI4a_gRE8859fyFcHpHRN0qhFpmAz24ympxCFlASqjTVOH7oywj6-fBT29jrEFyLVsqsGkp29W2_gF3u-PGwYiOj9petrx?purpose=fullsize");
+        }
+
+        .popular div:first-child {
+            width: 100%;
+
+        }
+
+        .popular div:nth-child(5) {
+            width: 32%;
+            margin: 9px;
+            padding-left: 2px;
+        }
+
+        .popular div:nth-child(6) {
+            width: 32%;
+            margin: 9px;
+            padding-left: 2px;
+        }
+
+        .popular div:nth-child(7) {
+            width: 32%;
+            margin: 9px;
+            padding-left: 2px;
+        }
+
+        .card {
+            padding-left: 10px;
+            padding-top: 10px;
+
+        }
+
+        .cardb {
+
+            width: 100%;
+            border-radius: 10px;
+            height: 150px;
+
+            background-size: cover;
+            background-image: url("https://images.openai.com/static-rsc-4/ApMEp1-eCwpYvZ0Qlv09o0OfzjMXrqAd4s7R-AxZlGXVhxg-xcYRal2AeEHWmtSJ9uq48uwze24SEsTJcD08XSW-s_OjEB2ik02zcvROWg5moHPEEFlXdaTFQvmBT2hcd2xmTXU4OfTrid4-z46s8C27v2caJaw4t6-y6o3Min1672AkMAN96xqDE5PvVFHp?purpose=fullsize");
+        }
+
+        .pos {
+            background-color: gray;
+            color: white;
+            padding: 6px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 90px;
+            left: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .outerdiv {
+            border: 1px solid grey;
+            margin-top: 10px;
+            border-radius: 10px;
+            width: 99%;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: #263d54;
+            color: white;
+        }
+
+        .discount {
+            position: absolute;
+            bottom: 18px;
+            right: 10px;
+            background-color: rgb(144, 193, 144);
+            color: green;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            z-index: 2;
+        }
+        .cardloc {
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+        .cardpara{
+            color: grey;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Explore The world</h1>
+        <ul class="navul">
+            <li>Home</li>
+            <li>Places</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+
+    </nav>
+    <div class="title">
+        <h2>Discover Beautiful Places</h2>
+        <ul class="divul">
+            <li class="travel">Travel</li>
+            <li>.</li>
+            <li>Explore</li>
+            <li>.</li>
+            <li>Experience</li>
+        </ul>
+        <button class="Explore">Explore Now</button>
+    </div>
+    <div class="popular">
+        <div>
+            <h2>Popular Destinations</h2>
+        </div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Agra
+            <p style="color: grey;">Visit the Taj Mahal</p>
+        </div>
+        <div>Kerala
+            <p style="color: grey;">Enjoy the backwaters</p>
+        </div>
+        <div>Paris
+            <p style="color: grey;">Explore the city</p>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Special Offer</h2>
+        <div class="outerdiv">
+             <button class="discount">30% OFF</button>
+            <div class="cardb">
+                <button class="pos">Travels.com</button>
+
+            </div>
+            <h2 class="cardloc">Maldives Vacation</h2>
+           <p class="cardpara">Book your dream vacation today!</p>
+        </div>
+
+    </div>
+    <footer>
+        <h2>Explore The World</h2>
+        <caption>@2026 all-rights-reserved</caption>
+    </footer>
+</body>
+
+</html>
